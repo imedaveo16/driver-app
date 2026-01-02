@@ -1,0 +1,56 @@
+name: civil_protection_driver
+description: Civil Protection Driver App - First Responder Application
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^2.24.2
+  cloud_firestore: ^4.14.0
+  firebase_messaging: ^14.7.10
+
+  # Maps & Location
+  google_maps_flutter: ^2.5.0
+  geolocator: ^10.1.0
+  url_launcher: ^6.2.2
+  permission_handler: ^11.0.1
+
+  # UI & State Management
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.4.9
+  glassmorphism: ^3.0.0
+  cached_network_image: ^3.3.1
+
+  # Utilities
+  intl: ^0.18.1
+  shared_preferences: ^2.2.2
+  connectivity_plus: ^5.0.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/icons/app_icon.png"
