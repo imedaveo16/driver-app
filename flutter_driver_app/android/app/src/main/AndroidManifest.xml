@@ -7,7 +7,12 @@
         android:label="Civil Protection"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.CivilProtection">
+        android:theme="@style/Theme.CivilProtection"
+        android:usesCleartextTraffic="true">
+        <!-- Firebase -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
