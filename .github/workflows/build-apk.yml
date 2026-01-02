@@ -37,20 +37,20 @@ jobs:
       - name: Build APK
         run: |
           cd flutter_driver_app
-          flutter build apk --release --target-platform android-arm64
+          flutter build apk --release --split-per-abi
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Driver_C2_Final
-          path: flutter_driver_app/build/app/outputs/flutter-apk/app-release.apk
+          path: flutter_driver_app/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
           retention-days: 30
 
       - name: Upload to GitHub Releases (if tagged)
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
-          files: flutter_driver_app/build/app/outputs/flutter-apk/app-release.apk
+          files: flutter_driver_app/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
           name: Driver_C2_Final.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
